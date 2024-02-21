@@ -17,6 +17,5 @@ jobs:
 
       - uses: spenserblack/actions-wiki@main
         with:
-          # Whatever directory you choose will be mirrored to the GitHub
-          # .wiki.git. The default is .github/wiki.
+          commit-message: ${{ github.event.pull_request.title }} (${{ github.event.number }})
           path: docs
