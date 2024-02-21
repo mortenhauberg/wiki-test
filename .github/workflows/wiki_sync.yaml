@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: spenserblack/actions-wiki
+      - uses: spenserblack/actions-wiki@main
         with:
           # Whatever directory you choose will be mirrored to the GitHub
           # .wiki.git. The default is .github/wiki.
