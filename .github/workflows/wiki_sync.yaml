@@ -17,5 +17,5 @@ jobs:
 
       - uses: spenserblack/actions-wiki@main
         with:
-          commit-message: Sync: ${{ github.event.head_commit.message }}
+          commit-message: "Sync: ${{ github.event.head_commit.message }}"
           path: docs
