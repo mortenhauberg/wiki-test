@@ -1,0 +1,21 @@
+name: Documentation
+
+on:
+  push:
+    branches: [main]
+    paths: [docs/**, .github/workflows/wiki_sync.yaml]
+concurrency:
+  group: wiki
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  wiki:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: spenserblack/actions-wiki
+        with:
+          # Whatever directory you choose will be mirrored to the GitHub
+          # .wiki.git. The default is .github/wiki.
+          path: docs
