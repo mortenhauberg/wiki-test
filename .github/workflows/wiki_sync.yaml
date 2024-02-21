@@ -17,5 +17,5 @@ jobs:
 
       - uses: spenserblack/actions-wiki@main
         with:
-          commit-message: ${{ github.event.pull_request.title }} (${{ github.event.number }})
+          commit-message: Sync: ${{ github.event.head_commit.message }}
           path: docs
